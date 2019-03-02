@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Send Details!</title>
+  </head>
+  <body>
+    <form action="add_sdata/" method="post">
+        {% csrf_token %}
+          <label>Name:
+            <input type="text" name="name" value=""><br>
+          </label>
+          <label>Sap-id:
+            <input type="number" name="sap" value=""><br>
+          </label>
+          <label>Department:
+            <input type="text" name="dept" value=""><br>
+          </label>
+          <label>Source:
+            <input type="text" name="source" value=""><br>
+          </label>
+          <label>Destination:
+            <input type="text" name="destination" value=""><br>
+          </label>
+          <label>Issue_date:
+            <input type="number" name="issued" value=""><br>
+          </label>
+          <label>Issue-Month:
+            <input type="number" name="issuem" value=""><br>
+          </label>
+          <label>Class:
+            <input type="number" name="type" value=""><br>
+          </label>
+
+
+          <input type="submit" name="" value="Submit!"><br>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Validate & Send</title>
+  </head>
+  <body>
+    <h3>Welcome Admin!</h3><br><br><br>
+    <form action="{% url 'display' %}" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="Display Data">
+
+
+    </form>
+  </body>
+</html>

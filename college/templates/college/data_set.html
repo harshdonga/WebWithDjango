@@ -1,0 +1,17 @@
+{% if data_set %}
+
+    <!-- {% for student in data_set %}
+      <input type="checkbox" name="" value="">
+    {% endfor %} -->
+    <form action="{% url 'check' %}" method = "post">
+	     {% csrf_token %}
+  	      {% for student in data_set %}
+                {% if not student in validate_set %}
+    		          <input type = "radio" id = "{{student.sap}}" name = "student" value = "{{ student.sap }}">{{ student.name }}<br>
+                {% endif%}
+           {% endfor %}
+  	        <input type = "submit" value = "CheckData"/>
+    </form>
+
+
+{% endif %}
