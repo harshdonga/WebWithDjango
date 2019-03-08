@@ -12,7 +12,9 @@ def check(request):
     data_set = auth.objects.all()
     try:
         user = data_set.get(username = username)
+        print(user)
         if( password == user.password):
+            print(user.password)
             url = 'http://127.0.0.1:8000/api/college/'
             r = requests.get(url).json()
             print(r)
@@ -21,3 +23,9 @@ def check(request):
             return render(request , 'govt/accessdenied.html')
     except:
         return render(request , 'govt/accessdenied.html')
+
+
+def add(request):
+    name = request.POST['rail']
+    print(name)
+    return HttpResponse()

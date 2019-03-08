@@ -8,12 +8,12 @@
   <body>
     <h3>Your Cred : {{ user.creds }}</h3>
     <h4>Make Some right now!</h4>
-    <form  action="" method="post">
+    <form  action="{% url 'add' %}" method="post">
       {% csrf_token %}
-        {% for x in r%}
-          <input type="radio" name="rail" value="">{{ x.name }}<br>
-        {% endfor %}
-        <input type="submit" name="" value="tick">
+          {% for x in r%}
+            <input type="radio" name="rail" value="{{ x.name }}">{{ x.name }}<br>
+          {% endfor %}
+          <input type="submit" name="" value="tick">
     </form>
   </body>
 </html>
